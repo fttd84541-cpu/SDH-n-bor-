@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Nábor SDH Ďáblice</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#222;
+}
+
+.header{
+    position:relative;
+    width:100%;
+    height:260px;
+    overflow:hidden;
+}
+
+.header img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.header-text{
+    position:absolute;
+    bottom:30px;
+    left:30px;
+    color:white;
+}
+
+.header-text h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.header-text p{
+    font-size:18px;
+}
+
+.container{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:40px 25px;
+}
+
+.section-title{
+    font-size:28px;
+    margin-bottom:30px;
+    font-weight:bold;
+}
+
+.form-group{
+    margin-bottom:35px;
+}
+
+label{
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:12px;
+    line-height:1.5;
+}
+
+.required{
+    color:#d60000;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    border:none;
+    background:#eef1f3;
+    padding:18px;
+    font-size:17px;
+    border-radius:4px;
+    outline:none;
+}
+
+textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.radio-group{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:15px;
+}
+
+.radio-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:22px;
+}
+
+.radio-item input{
+    width:26px;
+    height:26px;
+}
+
+.checkbox{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-top:40px;
+    line-height:1.7;
+    font-size:19px;
+}
+
+.checkbox input{
+    width:24px;
+    height:24px;
+    margin-top:5px;
+}
+
+button{
+    margin-top:45px;
+    width:100%;
+    background:#d62800;
+    color:white;
+    border:none;
+    padding:22px;
+    font-size:28px;
+    font-weight:bold;
+    border-radius:4px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#b51f00;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+    font-size:15px;
+}
+
+@media(max-width:700px){
+
+    .header{
+        height:220px;
+    }
+
+    .header-text h1{
+        font-size:28px;
+    }
+
+    .header-text p{
+        font-size:16px;
+    }
+
+    label{
+        font-size:18px;
+    }
+
+    .radio-item{
+        font-size:19px;
+    }
+
+    button{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop" alt="SDH">
+
+    <div class="overlay"></div>
+
+    <div class="header-text">
+        <h1>Staň se členem SDH Ďáblice</h1>
+        <p>Náborový formulář dobrovolných hasičů</p>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="section-title">
+        Přihláška do SDH
+    </div>
+
+    <form>
+
+        <div class="form-group">
+            <label>Jméno: <span class="required">*</span></label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Příjmení: <span class="required">*</span></label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Rodné číslo: <span class="required">*</span></label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Adresa trvalého pobytu dle OP: <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Adresa bydliště na území Prahy:</label>
+            <textarea></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>E-mail: <span class="required">*</span></label>
+            <input type="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mobilní telefon: <span class="required">*</span></label>
+            <input type="tel" required>
+        </div>
+
+        <div class="form-group">
+            <label>Jaké je vaše nejvyšší dosažené vzdělání? <span class="required">*</span></label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Jaké je vaše aktuální zaměstnání? <span class="required">*</span></label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+
+            <label>Jak hodnotíte svoji aktuální fyzickou kondici? <span class="required">*</span></label>
+
+            <div class="radio-group">
+
+                <label class="radio-item">
+                    <input type="radio" name="kondice">
+                    výborná
+                </label>
+
+                <label class="radio-item">
+                    <input type="radio" name="kondice">
+                    dobrá
+                </label>
+
+                <label class="radio-item">
+                    <input type="radio" name="kondice">
+                    nízká
+                </label>
+
+                <label class="radio-item">
+                    <input type="radio" name="kondice">
+                    nesportuji
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label>Jak a kde jste se o SDH Ďáblice dozvěděl(a)? <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Jak jste spjat(a) s městskou částí Ďáblice? <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Proč chcete vstoupit do SDH Ďáblice? <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Máte nějaké zkušenosti v oblasti požární ochrany? <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Máte nějaké odborné zkoušky nebo osvědčení? <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Máte nějakou praxi využitelnou v rámci SDH? <span class="required">*</span></label>
+            <textarea required></textarea>
+        </div>
+
+        <label class="checkbox">
+            <input type="checkbox" required>
+
+            <span>
+                Tímto potvrzuji svůj zájem o přijetí do Sboru dobrovolných hasičů
+                Ďáblice, dávám souhlas se zpracováním svých osobních údajů
+                a prohlašuji, že jsem se seznámil(a) se stanovami spolku.
+            </span>
+        </label>
+
+        <button type="submit">
+            Odeslat
+        </button>
+
+    </form>
+
+</div>
+
+<div class="footer">
+    SDH Ďáblice © 2026
+</div>
+
+</body>
+</html>
